@@ -1,5 +1,7 @@
 # Real-Time ROI Frame Capture with YOLOv8
 
+> **Take-home test assignment for a job interview** (computer vision). The final solution is at the top level; the development history is in [`drafts/`](drafts).
+
 Real-time video analytics that **captures a snapshot of a region of interest (ROI) whenever a target object (a car) enters it**, e.g. to record vehicles crossing a checkpoint or to trigger a camera / motor stop.
 
 ## How it works
@@ -39,6 +41,16 @@ python roi_capture.py
 - Set the input in `cv2.VideoCapture(...)`: a path to a video file, or `0` for a webcam.
 - Adjust the ROI with `roi = [(x1, y1), (x2, y2)]`.
 - YOLOv8 weights are downloaded automatically on the first run. Press **`q`** to quit.
+
+## Development process
+
+This was a take-home task for a job interview. [`drafts/`](drafts) keeps the experiments that led to the batched, multithreaded version:
+
+| Files | Idea |
+|---|---|
+| `4.ipynb`, `4 copy.ipynb`, `4-туц.ipynb`, `4-tini.ipynb` | First detection pipelines, including a YOLO *tiny* model for speed |
+| `5.ipynb`, `8.ipynb`, `8л.ipynb`, `8х.ipynb`, `itog8с.ipynb` | Frame skipping, batching and threading variants |
+| `ухудшенаяверсиясбатчамию.py` | A batched variant that turned out slower, kept as a negative result |
 
 ## Tech stack
 
